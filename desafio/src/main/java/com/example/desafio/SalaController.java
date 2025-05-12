@@ -30,6 +30,11 @@ public class SalaController {
         return ResponseEntity.ok(salaService.getSalaById(id));
     }
 
+    @PutMapping("/{id}")
+    public ResponseEntity<SalaDTO> updateSala(@PathVariable Long id, @RequestBody SalaDTO salaDTO) {
+        return ResponseEntity.ok(salaService.updateSala(id, salaDTO));
+    }
+
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deletarSala(@PathVariable Long id) {
         salaService.deleteSala(id);
