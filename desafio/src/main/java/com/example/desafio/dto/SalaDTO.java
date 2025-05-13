@@ -1,7 +1,6 @@
-package com.example.desafio;
+package com.example.desafio.dto;
 
 
-import jakarta.persistence.Id;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 

@@ -1,5 +1,8 @@
-package com.example.desafio;
+package com.example.desafio.Service;
 
+import com.example.desafio.Repository.SalaRepository;
+import com.example.desafio.Model.Sala;
+import com.example.desafio.dto.SalaDTO;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import  jakarta.persistence.EntityNotFoundException;
@@ -44,7 +47,7 @@ public class SalaService {
         return toDTO(sala);
     }
 
-    public SalaDTO updateSala(Long id, SalaDTO salaDTO) {
+     public SalaDTO updateSala(Long id, SalaDTO salaDTO) {
         Sala sala = salaRepository.findById(id)
                 .orElseThrow(() -> new EntityNotFoundException("Sala não encontrada"));
 

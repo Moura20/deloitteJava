@@ -1,4 +1,4 @@
-package com.example.desafio;
+package com.example.desafio.Model;
 
 import jakarta.persistence.*;
 import lombok.*;

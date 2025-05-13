@@ -1,4 +1,4 @@
-package com.example.desafio;
+package com.example.desafio.dto;
 
 import jakarta.validation.constraints.Future;
 import jakarta.validation.constraints.NotNull;

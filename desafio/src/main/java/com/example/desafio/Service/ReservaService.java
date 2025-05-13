@@ -1,10 +1,14 @@
-package com.example.desafio;
+package com.example.desafio.Service;
 
+import com.example.desafio.Repository.ReservaRepository;
+import com.example.desafio.Repository.SalaRepository;
+import com.example.desafio.Model.Reserva;
+import com.example.desafio.Model.Sala;
+import com.example.desafio.dto.ReservaDTO;
 import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalDateTime;
 import java.util.List;
 import java.util.stream.Collectors;
 

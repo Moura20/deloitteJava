@@ -1,5 +1,7 @@
-package com.example.desafio;
+package com.example.desafio.Controller;
 
+import com.example.desafio.dto.SalaDTO;
+import com.example.desafio.Service.SalaService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

@@ -1,7 +1,6 @@
-package com.example.desafio;
+package com.example.desafio.Model;
 
 import jakarta.persistence.*;
-import jakarta.persistence.criteria.Root;
 import lombok.*;
 
 import java.time.LocalDateTime;
