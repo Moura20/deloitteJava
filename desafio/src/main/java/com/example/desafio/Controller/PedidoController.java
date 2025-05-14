@@ -32,4 +32,18 @@ public class PedidoController {
         return
         ResponseEntity.ok(pedidoService.listar());
     }
-}
+
+    @PutMapping("/{id}")
+    public ResponseEntity<PedidoDTO> atualizar(@PathVariable Long id, @RequestBody PedidoDTO dto) {
+        PedidoDTO atualizado = pedidoService.atualizar(id, dto);
+        return ResponseEntity.ok(atualizado);
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deletar(@PathVariable Long id) {
+        pedidoService.deletar(id);
+        return ResponseEntity.noContent().build();
+    }
+
+ }
+

@@ -51,4 +51,25 @@ public class PedidoServiceImpl implements PedidoService {
                 pedido.getQuantidade()
         );
     }
+
+    @Override
+    public PedidoDTO atualizar(Long id, PedidoDTO dto) {
+        Pedido pedido = repository.findById(id)
+                .orElseThrow(() -> new EntityNotFoundException("Pedido não encontrado"));
+
+        pedido.setDescricao(dto.descricao());
+        pedido.setValor(dto.valor());
+
+        pedido = repository.save(pedido);
+        return toDTO(pedido);
+    }
+
+    @Override
+    public void deletar(Long id) {
+        if (!repository.existsById(id)) {
+            throw new EntityNotFoundException("Pedido não encontrado");
+        }
+        repository.deleteById(id);
+    }
+
 }
